@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        let workerUrl = "https://your-worker-name.workers.dev/"; // 🔴 Замени на URL твоего Cloudflare Worker
+        let workerUrl = "https://twilight-snowflake-49b6.alischer2021.workers.dev/"; // 🔴 Замени на URL твоего Cloudflare Worker
 
         fetch(workerUrl, {
             method: "POST",
