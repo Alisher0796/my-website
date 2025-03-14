@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        let workerUrl = "https://red-frost-d4f7.alischer2021.workers.dev/"; // 🔴 Замени на URL твоего Cloudflare Worker
+        let workerUrl = "https://red-frost-d4f7.alischer2021.workers.dev/";  // ✅ Замени на актуальный Cloudflare Worker URL
 
         fetch(workerUrl, {
             method: "POST",
