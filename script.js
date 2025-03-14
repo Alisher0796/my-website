@@ -12,9 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        let scriptUrl = "https://script.google.com/macros/s/AKfycbxd3o1NqT8pIfQ-uDZqsm7hPnQRii42fQjhYEIjm6KegSmck-BeKN2lIuu8qnyttG8sGQ/exec"; // Вставь новый URL Google Apps Script
+        let workerUrl = "https://your-worker-name.workers.dev/"; // 🔴 Замени на URL твоего Cloudflare Worker
 
-        fetch(scriptUrl, {
+        fetch(workerUrl, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
@@ -24,9 +24,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 amount: amount
             })
         })
-        .then(response => response.text())
+        .then(response => response.json())
         .then(data => {
-            if (data === "OK") {
+            if (data.success) {
                 alert("Заявка успешно отправлена!");
                 document.getElementById("application-form").reset(); // Очистить форму после успешной отправки
             } else {
