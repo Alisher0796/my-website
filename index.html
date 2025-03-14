@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FINANCE PAYMENTS - Bank Card Rental Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="#" class="logo">FINANCE PAYMENTS</a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#benefits">О нас</a></li>
+                    <li><a href="#contact">Контакт</a></li>
+                </ul>
+                <div class="burger-menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Финансовые инструменты для безопасных онлайн-платежей.</h1>
+                <p>Аренда банковских карт для бизнеса и тестирования платежных систем.</p>
+                <a href="#signup" class="cta-button">Стать партнером</a>
+            </div>
+            <div class="hero-image animated">
+                <img src="./images/cards.png" alt="Банковские карты">
+                <div class="floating-card card-1">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Защита от мошенничества</span>
+                </div>
+                <div class="floating-card card-2">
+                    <i class="fas fa-clock"></i>
+                    <span>Мгновенные транзакции</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="benefits" class="benefits">
+        <div class="container">
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3>Зачем арендовать банковскую карту?</h3>
+                    <p>Аренда банковской карты позволяет использовать её для бизнес-платежей или тестирования платёжных систем без необходимости открытия собственного счёта.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Как обеспечивается безопасность при аренде карты?</h3>
+                    <p>Мы предоставляем карты с высоким уровнем защиты, включая шифрование данных и многофакторную аутентификацию, чтобы гарантировать безопасность ваших транзакций.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Какие преимущества аренды банковской карты?</h3>
+                    <p>Вы получаете доступ к финансовым инструментам без лишних формальностей, что позволяет быстро и эффективно проводить платежи и тестирование сервисов.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="signup" class="signup">
+        <div class="container">
+            <div class="form-container">
+                <h2>Начните пользоваться нашими услугами</h2>
+                <form id="application-form">
+                    <div class="amount-selector">
+                        <div class="amount-option" data-amount="25000">
+                            <h3>25.000 RUB</h3>
+                            <p>Standard Plan</p>
+                        </div>
+                        <div class="amount-option" data-amount="50000">
+                            <h3>50.000 RUB</h3>
+                            <p>Premium Plan</p>
+                        </div>
+                    </div>
+                    <div id="amount-error"></div>
+                    <input type="hidden" id="selected-amount" name="amount" value="">
+
+                    <div class="form-group">
+                        <label for="name">Имя</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="surname">Фамилия</label>
+                        <input type="text" id="surname" name="surname" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telegram">Telegram Username</label>
+                        <input type="text" id="telegram" name="telegram" placeholder="@username" required>
+                    </div>
+
+                    <button type="submit" class="cta-button">Подать заявку</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="support">
+        <div class="container">
+            <div class="support-box">
+                <h2>Нужна помощь?</h2>
+                <p>Наша служба поддержки готова помочь вам 24/7</p>
+                <a href="https://t.me/Fpaymen" class="telegram-button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.05-.2-.06-.06-.17-.04-.24-.02-.1.02-1.77 1.13-5.01 3.31-.47.32-.9.48-1.29.47-.42-.01-1.23-.24-1.83-.44-.74-.25-1.33-.38-1.28-.81.03-.22.35-.44.96-.66 3.78-1.65 6.31-2.74 7.58-3.27 3.61-1.51 4.36-1.77 4.85-1.78.11 0 .35.03.51.14.13.1.17.23.19.33.02.12.01.24.01.24z"/>
+                    </svg>
+                    Связаться через Telegram
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>© 2024 Все права защищены | FINANCE PAYMENTS</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
