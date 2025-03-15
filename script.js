@@ -1,4 +1,28 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+        // Mobile menu toggle
+    const burgerMenu = document.querySelector('.burger-menu');
+    const navMenu = document.querySelector('.nav-menu');
+
+    burgerMenu.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close mobile menu if open
+                navMenu.classList.remove('active');
+            }
+        });
+    });
+
     document.getElementById("application-form").addEventListener("submit", function (event) {
         event.preventDefault();
 
@@ -12,7 +36,14 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
+        if (!telegram.startsWith("@")) {
+        alert("Введите ваш Telegram юзернейм с @ (например, @username)");
+        return;
+        }
+
         let workerUrl = "https://red-frost-d4f7.alischer2021.workers.dev/";  // ✅ Замени на актуальный Cloudflare Worker URL
+        
+
 
         fetch(workerUrl, {
             method: "POST",
