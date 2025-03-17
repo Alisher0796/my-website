@@ -148,48 +148,6 @@ header {
     border-radius: 10px;
 }
 
-/* Плавающие карточки */
-.floating-card {
-    position: absolute;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(8px);
-    padding: 12px 18px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    z-index: 3;
-    font-size: 14px;
-    font-weight: 500;
-    white-space: nowrap;
-    transition: transform 0.3s ease-in-out, background 0.3s;
-}
-
-.floating-card i {
-    font-size: 20px;
-    color: #007bff;
-}
-
-.card-1 {
-    top: 10%;
-    left: 10%;
-    animation-delay: 0s;
-}
-
-.card-2 {
-    bottom: 15%;
-    right: 10%;
-    animation-delay: 1.5s;
-}
-
-@keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0); }
-}
-
 
 
 /* Application Form */
@@ -549,20 +507,24 @@ footer {
   animation: fadeIn 0.6s ease forwards;
 }
 
-.floating-card {
-    font-size: 12px;
-    padding: 8px 12px;
-  }
+footer {
+    background-color: #0a2540; /* Тёмный фон */
+    color: #fff; /* Белый текст */
+    text-align: center; /* Выравнивание по центру */
+    padding: 15px 10px; /* Внутренние отступы */
+    font-size: 14px; /* Размер шрифта */
+    position: relative; /* Чтобы футер не перекрывался */
+    bottom: 0;
+    width: 100%;
+}
 
-  .card-1 {
-    top: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+footer a {
+    color: #fff; /* Голубой цвет ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-weight: bold;
+}
 
-  .card-2 {
-    bottom: 5%;
-    right: 50%;
-    transform: translateX(50%);
-  }
+footer a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+    color: #00aaff; /* Изменение цвета при наведении */
 }
